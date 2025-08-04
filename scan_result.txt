@@ -1,0 +1,41 @@
+# Nmap 7.95 scan initiated Mon Aug  4 12:32:33 2025 as: /usr/lib/nmap/nmap --privileged -sS -oN scan_result.txt 192.168.31.0/24
+Nmap scan report for jiofiber.local.html (192.168.31.1)
+Host is up (0.0059s latency).
+Not shown: 994 closed tcp ports (reset)
+PORT     STATE SERVICE
+53/tcp   open  domain
+80/tcp   open  http
+443/tcp  open  https
+7443/tcp open  oracleas-https
+8080/tcp open  http-proxy
+8443/tcp open  https-alt
+MAC Address: 3C:55:DB:BD:C0:AD (Shenzhen Skyworth Digital  Technology)
+
+Nmap scan report for android-5351762f5579c6f9.lan (192.168.31.46)
+Host is up (0.0067s latency).
+All 1000 scanned ports on android-5351762f5579c6f9.lan (192.168.31.46) are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+MAC Address: C4:C5:63:3A:39:C3 (Tecno Mobile Limited)
+
+Nmap scan report for 192.168.31.76
+Host is up (0.0046s latency).
+All 1000 scanned ports on 192.168.31.76 are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+MAC Address: 86:1F:00:75:DC:67 (Unknown)
+
+Nmap scan report for VishalPC.lan (192.168.31.205)
+Host is up (0.00080s latency).
+Not shown: 996 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+3306/tcp open  mysql
+MAC Address: C8:8A:9A:E7:06:30 (Intel Corporate)
+
+Nmap scan report for kali.lan (192.168.31.151)
+Host is up (0.0000060s latency).
+All 1000 scanned ports on kali.lan (192.168.31.151) are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+
+# Nmap done at Mon Aug  4 12:33:20 2025 -- 256 IP addresses (5 hosts up) scanned in 47.58 seconds
