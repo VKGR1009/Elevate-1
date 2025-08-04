@@ -1,0 +1,52 @@
+# Open Port Risks – Based on Nmap Scan Analysis
+
+## Overview
+
+An open port is a network port that is configured to accept incoming connections. While open ports are necessary for the functioning of services such as web servers and databases, they can also introduce security risks if not properly managed. This document analyzes the open ports discovered during the local network scan and highlights their associated security concerns.
+
+
+# Open Ports Identified
+
+### 1. Router (192.168.31.1)
+**Open Ports:** 53 (DNS), 80 (HTTP), 443 (HTTPS), 7443, 8080, 8443  
+**Associated Risks:**
+- **Web interfaces (80, 443, 8080, 8443, 7443):** If administrative panels are exposed, they can be brute-forced or exploited using known vulnerabilities.
+- **DNS (53):** Misconfigured DNS services can be leveraged in amplification attacks or for data exfiltration.
+
+### 2. Windows PC (192.168.31.205)
+**Open Ports:** 135, 139, 445 (RPC/SMB), 3306 (MySQL)  
+**Associated Risks:**
+- **SMB services (135, 139, 445):** These are common attack vectors for malware and ransomware. Unpatched vulnerabilities can be exploited for lateral movement.
+- **MySQL (3306):** If the database is exposed to the network or internet, it may be attacked via SQL injection or brute-force, especially if weak credentials are used.
+
+### 3. IoT or Unknown Device (192.168.31.170)
+**Open Port:** 2869 (ICS/UPnP)  
+**Associated Risks:**
+- **UPnP services:** Universal Plug and Play is known for security issues. Misconfiguration may expose devices unintentionally or allow remote access without proper authentication.
+
+
+
+# Devices with No Open Ports Detected
+
+- Android device (192.168.31.46)
+- Unknown device (192.168.31.76)
+- Kali VM (192.168.31.151)
+
+These hosts had no open TCP ports, indicating good default firewall or service configurations.
+
+
+
+# Recommendations
+
+- Disable unused services and close unnecessary ports.
+- Regularly update device firmware, operating systems, and services.
+- Use firewalls to limit network exposure.
+- Restrict port access to trusted IP ranges when possible.
+- Use strong authentication for all exposed services.
+- Monitor traffic for abnormal behavior using tools like Wireshark or IDS solutions.
+
+
+
+## Conclusion
+
+Open ports are essential for network communication, but they must be managed securely. The results of this scan highlight the importance of regular port audits and proactive security practices to minimize potential vulnerabilities.
